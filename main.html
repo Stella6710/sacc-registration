@@ -18,22 +18,23 @@
         .container{
             width: 100%;
             height: 250px;
+            background-color:rgb(242, 153, 0);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            animation: anim 5s ease-in-out 0s infinite
+            /* animation: anim 4s ease-in-out 0s infinite
         }
         @keyframes anim{
             0% {
             background-color:rgb(249, 160, 7);
             }
             50% {
-                background-color: rgb(255, 185, 22);;
+                background-color: rgb(162, 85, 3);;
             }
             100% {
                 background-color:rgb(249, 160, 7);
-            }
+            } */
         }
         .text1{
             font-size: 65px;
@@ -48,12 +49,12 @@
         }
 
         /* 比赛信息 */
-        .message{   /*白色背景 */
+        .message{   /*白色背景1 */
             height:550px;
             width: 70%;
             background-color:white;
-            border-radius: 6px;
-            box-shadow: 10px 10px 10px gainsboro;
+            border-radius: 30px;
+            box-shadow: 3px 3px 10px gainsboro;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -61,7 +62,7 @@
             margin: -20px auto;
         } 
         .head1{
-            font-size: 25px;
+            font-size: 35px;
             font-weight: bolder;
             color: darkorange;
             margin: 30px auto 10px;
@@ -85,17 +86,17 @@
         }
 
         /* 在线报名 */
-        .enter{  /*白色背景 */
-            height: 900px;
+        .enter{  /*白色背景2 */
+            height: 1100px;
             width: 70%;
             background-color: rgb(255, 255, 255);
-            border-radius: 6px;
-            box-shadow: 10px 10px 10px gainsboro;
+            border-radius: 30px;
+            box-shadow: 3px 3px 10px gainsboro;
             position: relative;
-            margin: 35px auto;
+            margin: 50px auto;
         }
         .head2{
-            font-size: 25px;
+            font-size: 35px;
             font-weight: bolder;
             color: darkorange;
             position: absolute;
@@ -104,9 +105,98 @@
             transform: translate(-50%, 50%);
             margin: 10px auto 10px;
         }
+         .form-grid{    /*网格 */
+            padding-top: 145px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px 0;
+        }
+        .field{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
 
+        .field label{    /* 基本信息填写 */
+            font-size: 23px;
+            font-weight: 450;
+            color: rgba(0, 0, 0, 0.87);
+            padding-left: 90px;
+        }
+        .field input{
+            width: 60%;
+            padding: 8px 10px;
+            margin-left: 80px;
+            font-size: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.532);
+            border-radius: 6px;
+        }
+        .field input:hover{
+            box-shadow: 0 0 0 1px rgb(0, 0, 0);
+        }
 
+        select{     /* 选择参赛项目 */
+            width: 66%;
+            padding: 8px 10px;
+            margin-left: 80px;
+            font-size: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.532);
+            border-radius: 6px;
+            color: rgb(128, 123, 123);
+        }
+        select:hover{
+            box-shadow: 0 0 0 1px rgb(0,0,0);
+        }
+        select:valid{
+            color: #000;
+        }
 
+        fieldset{   /* 调剂 */
+            border: 0;
+            margin-top: 50px;
+        }
+        fieldset legend{
+            padding-bottom: 10px;
+            padding-left: 90px;
+            font-size: 23px;
+            font-weight: 450;
+        }
+        fieldset label{
+            padding-left: 90px;
+            font-size: 20px;
+            font-weight: 400;
+        }
+
+        textarea{    /* 留言 */
+            width: 80%;
+            height: 180px;
+            padding: 10px;
+            font-size: 20px;
+            margin-left: 80px;
+            border-radius: 6px;
+            resize: none;
+        }
+        textarea:hover{
+            box-shadow: 0 0 0 1px rgb(0,0,0);
+        }
+
+        button{     /* 按钮 */
+            height: 45px;
+            width: 83%;
+            margin-top: 40px;
+            margin-left: 80px;
+            font-size: 18px;
+            color: rgb(255, 255, 255);
+            border: none;
+            border-radius: 8px;
+            background-color: rgb(252, 157, 5);
+        }
+        button:hover{
+            box-shadow: 1px 1px 2px 2px rgb(227, 225, 225);
+        }
+        button:active{
+            transform: translate(1px,1px);
+        }
     </style>
 </head>
 
@@ -141,7 +231,55 @@
     <!-- 在线报名 -->
     <div class="enter">
         <div class="head2">在线报名</div>
+
+        <form class="form-grid" action="">
+            <div class="field">
+                <label for="name">姓名</label>
+                <input type="text" id="name" name="name" placeholder="请输入你的真实姓名" required>
+            </div>
+            <div class="field">
+                <label for="number">学号</label>
+                <input type="text" id="number" name="number" placeholder="请输入你的学号" required>
+            </div>
+            <div class="field">
+                <label for="phone">手机号</label>
+                <input type="text" id="phone" name="phone" placeholder="请输11位手机号" required>
+            </div>
+            <div class="field">
+                <label for="email">邮箱</label>
+                <input type="email" id="email" name="email" placeholder="请输你的邮箱" required>
+            </div>
+            <div class="field">
+                <label for="college">学院</label>
+                <input type="text" id="college" name="college" placeholder="如：计算机学院" required>
+            </div>
+            <div class="field">
+                <label for="type">参赛类别</label>
+                <select name="type" id="type" required>
+                    <option value="" disabled selected>选择参赛类别:</option>
+                    <option value="创新设计">创新设计</option>
+                    <option value="算法竞赛">算法竞赛</option>
+                    <option value="创业实践">创业实践</option>
+                </select>
+            </div>
+        </form>
+
+        <div>
+            <fieldset>
+                <legend>是否服从调剂</legend>
+                <label for="adjust">是</label>
+                <input type="radio" id="adjust" value="yes" name="adjust">
+                <label for="adjust">否</label>
+                <input type="radio" id="adjust" value="no" name="adjust">
+            </fieldset>
+        </div>
+
+        <p style="font-size: 23px; font-weight: 450; color:rgba(0, 0, 0, 0.87); margin-left: 90px; margin-top: 35px; margin-bottom: 10px;">个人简介/参赛宣言</p>
+        <textarea name="remark" placeholder="简单介绍你自己，或写下参赛宣言（选填）" maxlength="300"></textarea>
+        <p style="font-size: 15px; font-weight: 400; font-style: italic; color:rgba(230, 77, 77, 0.87); margin-left: 85px; margin-top: 10px;">不超过300字</p>
         
+        <button type="submit">提交报名</button>
     </div>
+    <p style="text-align: center;color: #c9c8c8; margin-bottom: 40px;">NJUPT SACC 2026 | 计算机科学技术协会</p>
 </body>
 </html>
