@@ -5,16 +5,19 @@
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <title>SACC科技创新大赛报名表</title>
     <style>
+
         body{
-            background-color: rgb(241, 243, 245);
+            background-color:rgb(255, 255, 242);
         }
         *{
             margin: 0;
             padding: 0;
         }
+
+        /* 橙色标头 */
         .container{
             width: 100%;
-            height: auto;
+            height: 250px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -26,49 +29,42 @@
             background-color:rgb(249, 160, 7);
             }
             50% {
-                background-color: rgb(253, 208, 7);;
+                background-color: rgb(255, 185, 22);;
             }
             100% {
                 background-color:rgb(249, 160, 7);
             }
         }
         .text1{
-            font-size: 30px;
-            font-weight: 500;
+            font-size: 65px;
+            font-weight: 650;
             color: aliceblue;
-            margin-top:20px;
+            margin-top:50px;
         }
         .text2{
-            font-size: 12px;
+            font-size: 20px;
             color: aliceblue;
-            margin-bottom:25px;
+            margin-bottom:60px;
         }
-        .message{
-            height: 330px;
-            width: 50%;
-            background-color: rgb(255, 255, 255);
+
+        /* 比赛信息 */
+        .message{   /*白色背景 */
+            height:550px;
+            width: 70%;
+            background-color:white;
             border-radius: 6px;
             box-shadow: 10px 10px 10px gainsboro;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            margin: -12px auto;
-        }
-        .enter{
-            height: 450px;
-            width: 50%;
-            background-color: rgb(255, 255, 255);
-            border-radius: 6px;
-            box-shadow: 10px 10px 10px gainsboro;
-            position: relative;
-            margin: 35px auto;
-        }
-        .head{
-            font-size: 18px;
-            font-weight: bold;
+            margin: -20px auto;
+        } 
+        .head1{
+            font-size: 25px;
+            font-weight: bolder;
             color: darkorange;
-            margin: 10px auto 10px;
+            margin: 30px auto 10px;
         }
         .content{
             height: 10px;
@@ -80,33 +76,72 @@
             margin: 0px auto auto;
         }
         .text{
-            margin: 5px;
+            font-size: 20px;
+            margin: 15px;
         }
+        span{
+            color:rgba(255, 136, 0, 0.909);
+            font-weight: 800;
+        }
+
+        /* 在线报名 */
+        .enter{  /*白色背景 */
+            height: 900px;
+            width: 70%;
+            background-color: rgb(255, 255, 255);
+            border-radius: 6px;
+            box-shadow: 10px 10px 10px gainsboro;
+            position: relative;
+            margin: 35px auto;
+        }
+        .head2{
+            font-size: 25px;
+            font-weight: bolder;
+            color: darkorange;
+            position: absolute;
+            left: 50%;
+            top: 6px;
+            transform: translate(-50%, 50%);
+            margin: 10px auto 10px;
+        }
+
+
+
     </style>
 </head>
 
+<!-- -------------------------------------------------------- -->
+
 <body>
+    <!-- 橙色标头 -->
     <div class="container">
         <div class="text1">SACC科技创新大赛报名</div>
         <div class="text2">南京邮电大学计算机学院科学技术协会</div>
     </div>
+
+    <!-- 比赛信息 -->
     <div class="message">
-        <div class="head">
+        <div class="head1">
             比赛信息
         </div>
         <div class="content">
             <div>
-                <p class="text">· 比赛名称：SACC科技创新大赛</p>
-                <p class="text">· 面向对象：南京邮电大学全体在校生</p>
-                <p class="text">· 比赛时间：2026年 9月15日</p>
-                <p class="text">· 比赛地点：南邮仙林校区计算机学科楼</p>
-                <p class="text">· 报名截止：2026年 9月10日 23:59</p>
-                <p class="text">· 主办单位：计算机学院科学技术协会</p>
+                <p class="text"><span>· 比赛名称：</span>SACC科技创新大赛</p>
+                <p class="text"><span>· 面向对象：</span>南京邮电大学全体在校生</p>
+                <p class="text"><span>· 比赛时间：</span>2026年 9月15日</p>
+                <p class="text"><span>· 比赛地点：</span>南邮仙林校区计算机学科楼</p>
+                <p class="text"><span>· 报名截止：</span>2026年 9月10日 23:59</p>
+                <p class="text"><span>· 主办单位：</span>计算机学院科学技术协会</p>
             </div>
-            <hr style="width: 90%; margin: 10px;">
-            <p style="color: rgba(0, 0, 0, 0.5);font-size: small;margin: 3px 35px;">本次大赛旨在激发同学们的创新思维和动手能力，开设“创新设计”“算法竞赛”“创业实践”三条赛道，参赛者可以个人或团队（不超过3人）新式报名。获奖者将获得校级证书及丰厚奖品，优秀项目更有机会获得学院孵化支持。</p>
+            <hr style="width: 90%; margin: 22px;">
+            <p style= "color: rgba(0, 0, 0, 0.5);font-size: large; margin: 18px 35px;">本次大赛旨在激发同学们的创新思维和动手能力，开设“创新设计”“算法竞赛”“创业实践”三条赛道，参赛者可以个人或团队（不超过3人）新式报名。获奖者将获得校级证书及丰厚奖品，优秀项目更有机会获得学院孵化支持。</p>
         </div>
     </div>
-    <div class="enter"></div>
+
+    <!-- 在线报名 -->
+    <div class="enter">
+        <div class="head2">在线报名</div>
+        
+    </div>
 </body>
 </html>
