@@ -232,14 +232,14 @@
     <div class="enter">
         <div class="head2">在线报名</div>
 
-        <form class="form-grid" action="">
+        <form class="form-grid" action="" id="myform">
             <div class="field">
                 <label for="name">姓名</label>
                 <input type="text" id="name" name="name" placeholder="请输入你的真实姓名" required>
             </div>
             <div class="field">
                 <label for="number">学号</label>
-                <input type="text" id="number" name="number" placeholder="请输入你的学号" required>
+                <input type="text" id="number" name="stu-number" placeholder="请输入你的学号" required>
             </div>
             <div class="field">
                 <label for="phone">手机号</label>
@@ -255,13 +255,14 @@
             </div>
             <div class="field">
                 <label for="type">参赛类别</label>
-                <select name="type" id="type" required>
+                <select name="project" id="type" required>
                     <option value="" disabled selected>选择参赛类别:</option>
                     <option value="创新设计">创新设计</option>
                     <option value="算法竞赛">算法竞赛</option>
                     <option value="创业实践">创业实践</option>
                 </select>
             </div>
+            <input type="hidden" name="Message" id="hidmsg">
         </form>
 
         <div>
@@ -275,10 +276,22 @@
         </div>
 
         <p style="font-size: 23px; font-weight: 450; color:rgba(0, 0, 0, 0.87); margin-left: 90px; margin-top: 35px; margin-bottom: 10px;">个人简介/参赛宣言</p>
-        <textarea name="remark" placeholder="简单介绍你自己，或写下参赛宣言（选填）" maxlength="300"></textarea>
+        <textarea  id="mytext" name="remark" placeholder="简单介绍你自己，或写下参赛宣言（选填）" maxlength="300"></textarea>
         <p style="font-size: 15px; font-weight: 400; font-style: italic; color:rgba(230, 77, 77, 0.87); margin-left: 85px; margin-top: 10px;">不超过300字</p>
         
-        <button type="submit">提交报名</button>
+        <button type="submit" id="mybutton">提交报名</button>
+
+        <script>
+            var form = document.getElementById("myform");
+            var textarea = document.getElementById("mytext");
+            var button = document.getElementById("mybutton");
+            var hidden = document.getElementById("hidmsg");
+
+            button.onclick = function(){
+                hidden.value = textarea.value;
+                form.submit();
+            };
+        </script>
     </div>
     <p style="text-align: center;color: #c9c8c8; margin-bottom: 40px;">NJUPT SACC 2026 | 计算机科学技术协会</p>
 </body>
