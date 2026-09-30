@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>报名成功</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            background-color: rgb(239, 239, 239);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container{
+            height: 80%;
+            width: 80%;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 0 0 5px rgb(255, 198, 132);
+            display: flex;
+            flex-direction: column;
+        }
+        img{       /* logo图 */
+            width: auto;
+            height: 80px;
+            padding-top: 40px;
+            padding-left: 30px;
+        }
+        .text{     /* 科协标头 */
+            font-size: 30px;
+        }
+        .head{
+            text-align: center; 
+            padding-top: 25px;
+        }
+        .h1{      /* 报名成功 */
+            text-align: center; 
+            color: rgb(255, 75, 75); 
+            font-size: 50px; 
+            margin:25px;
+        }
+        .info{      /* 报名信息块 */
+            border: 2px dotted rgb(86, 86, 86);
+            margin: 0 250px;
+        }
+        .top{      /* 报名凭证 */
+            text-align: center;
+            font-size: 28px;
+            color: rgb(62, 62, 62);
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        .msg{       /* 姓名，学号，项目 */
+            margin-left: 38%;
+            font-size: 25px;
+        }
+        .content{    /* 拉取的信息 */
+            font-size: 25px;
+        }
+        
+        /* 返回报名页面 */
+        .return{     
+            text-align: center;
+            padding-top: 80px;
+        }
+        a{         
+            display: inline-block;
+            text-decoration: none;
+            padding: 12px 24px;
+            background-color: rgb(255, 162, 22);
+            border-radius: 10px;
+            color: aliceblue;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        a:hover{
+        box-shadow: 1px 1px 2px 2px rgb(227, 225, 225);
+        }
+
+        /* 响应式布局,适应手机屏幕 */
+        @media screen and (max-width:768px){
+            img{
+                width: auto;
+                height: 50px;
+                padding-top: 20px;
+                padding-left: 10px;
+            }
+            .head{
+                text-align: center; 
+                padding-top: 12px;
+                font-size: 10px;
+            }
+            .text{
+                font-size: 18px;
+            }
+            .h1{
+                text-align: center; 
+                color: rgb(255, 75, 75); 
+                font-size: 30px; 
+                margin:25px;
+            }
+            .top{
+                text-align: center;
+                font-size: 25px;
+                color: rgb(62, 62, 62);
+                margin-top: 0;
+                margin-bottom: 20px;
+            }
+            .info{
+                border: 2px dotted rgb(86, 86, 86);
+                margin: 15px 50px;
+            }
+            .msg{
+                margin-left: 22%;
+                font-size: 16px;
+            }
+            .content{
+                font-size: 16px;
+            }
+            a{         
+                display: inline-block;
+                text-decoration: none;
+                padding: 10px 20px;
+                background-color: rgb(255, 162, 22);
+                border-radius: 10px;
+                color: aliceblue;
+                font-size: 15px;
+                font-weight: 400;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div style="display: flex;flex-direction: row;">
+            <img src="科协logo.png" alt="logo">
+            <p class="head"><span class="text">计软网安院科学与技术协会</span><br>Science Association of Computer College</p>
+        </div>
+        <div class="tip">
+            <h1 class="h1">恭喜你报名成功！</h1>
+        </div>
+        <p class="top"">报名凭证</p>
+        <div class="info">
+            <p class="msg">姓名：<span id="showName"class="content"></span></p>
+            <p class="msg">学号：<span id="showNumber" class="content"></span></p>
+            <p class="msg">项目：<span id="showType" class="content"></span></p>
+        </div>
+        <div class="return">
+            <a href="index.html">返回报名页</a>
+        </div>
+    </div>
+
+    <script>
+        var dataStr = localStorage.getItem('userdata');
+        var data = JSON.parse(dataStr);
+
+        document.getElementById('showName').textContent = data.name;
+        document.getElementById('showNumber').textContent = data.number;
+        document.getElementById('showType').textContent = data.type;
+
+        localStorage.removeItem('userdata');
+
+    </script>
+</body>
+</html>

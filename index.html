@@ -242,7 +242,7 @@
     <div class="enter">
         <div class="head2">在线报名</div>
 
-        <form class="form-grid" action="" id="myform"> <!-- 基本信息填写 -->
+        <form class="form-grid" action="success.html" method="get" id="myform"> <!-- 基本信息填写 -->
             <div class="field">
                 <label for="name">姓名<span style="color: rgb(250, 100, 100);">*</span></label>
                 <input type="text" id="name" name="name" placeholder="请输入你的真实姓名" required>
@@ -332,7 +332,19 @@
                     e.preventDefault();  // 校验通过才能提交表单
                     return false;
                 }
+
+
                 hidden.value = textarea.value;    // 按钮合并提交表单和多行文本框
+
+                var name = document.getElementById('name');  // 将报名信息存储到localstorage
+                var type = document.getElementById('type');
+                var userdata = {
+                    name: name.value.trim(),
+                    number: number.value.trim(),
+                    type: type.value
+                }
+                localStorage.setItem('userdata', JSON.stringify(userdata));
+
                 form.requestSubmit();
             })
 
@@ -342,8 +354,3 @@
     <p style="text-align: center;color: #c9c8c8; margin-bottom: 40px;">NJUPT SACC 2026 | 计算机科学技术协会</p>
 </body>
 </html>
-<<<<<<< HEAD
-=======
-=======
-</html>
->>>>>>> 0a5900eb146cb9bf7baeae5487cde2d834362ddd
