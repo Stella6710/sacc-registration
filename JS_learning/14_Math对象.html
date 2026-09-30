@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Math.abs()    取绝对值
+        console.log(Math.abs(-555));
+
+        // Math.min()
+        console.log(Math.min(96,55,2,64,-56));
+
+        // Math.max()
+        console.log(Math.max(96,55,2,64,-56));
+        
+        // Math.floor()   向下取整
+        console.log(Math.floor(5.6));
+        
+        // Math.ceil()   向上取整
+        console.log(Math.ceil(5.6));
+
+        // Math.random   [0,1)间随机数
+        console.log(Math.random());
+
+            // 定义一个可取任意范围的随机数
+        function Random(x,y){
+            result = Math.random()*(Math.max(x,y)-Math.min(x,y))+Math.min(x,y);
+            return Math.floor(result)
+        }
+        console.log(Random(50,800));
+    </script>
+</body>
+</html>

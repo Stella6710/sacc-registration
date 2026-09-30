@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            height: 300px;
+            width: 200px;
+            padding: 10px;
+            border: 5px solid red;
+            margin: 20px;
+            background-color: blue;
+        }
+        h3{
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+
+    <h3>标题1</h3>
+    <h3>标题2</h3>
+    <h3>标题3</h3>
+    <h3>标题4</h3>
+    <h3>标题5</h3>
+
+    <script>
+        // 获取元素高宽，包括padding，不包括border和margin
+        var box = document.getElementById('box');
+        console.log(box.clientHeight);
+        console.log(box.clientWidth);
+        
+        // 获取视口高度（屏幕高度）
+        console.log(document.documentElement.clientHeight);
+        // 获取页面高度
+        console.log(document.body.clientHeight);
+        
+        // 获取滚动高度
+        console.log(document.documentElement.scrollTop);
+        
+        // 获取元素本身+padding+border高宽
+        console.log(box.offsetHeight);
+        console.log(box.offsetWidth);
+        
+        // 到定位父级元素上/左边界的距离
+        console.log(box.offsetTop);
+        console.log(box.offsetLeft);
+        
+        </script>
+</body>
+</html>

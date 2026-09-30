@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box" id="root">kskbl</div>
+    <script>
+        // 获取元素/标签
+        var root = document.getElementById('root');
+        // 读取id
+        console.log(root.id);
+        // 修改id
+        root.id = 'roots';
+        // 修改class
+        root.className = 'box box1';
+        // 增加class
+        root.classList.add('box2');
+        // 移除class
+        root.classList.remove('box');
+        // 判断class里是否有
+        console.log(root.classList.contains('box1'));
+        // 增加标签内容.innerHTML/Text不加内容就是读取
+        root.innerHTML = '康神开播了<p>kskbl</p>';  // 可以识别标签
+        // root.innerText = '真的假的<p>zdjd</p>';    // 不可识别标签
+    </script>
+</body>
+</html>

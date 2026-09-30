@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="container"></div>
+
+    <script>
+        // 创建p标签
+        var tag = document.createElement('p');
+        // 创建内容
+        var content = document.createTextNode('我是内容');
+        // 内容放进标签
+        tag.appendChild(content);
+
+        // 创建id属性
+        var id = document.createAttribute('id');
+        // id内容
+        id.value = 'root';
+        // id放入标签
+        tag.setAttributeNode(id);
+
+        // 打印结果
+        console.log(tag);
+
+        var div = document.getElementById('container');
+        div.appendChild(tag)
+    </script>
+</body>
+</html>

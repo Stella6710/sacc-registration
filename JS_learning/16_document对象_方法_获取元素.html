@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>div1</div>
+    <div>div2</div>
+
+    <p class="text">kskbl</p>
+    <p class="text">kskbl!</p>
+
+    <div id="root">666</div>
+
+    <div class="nav">nav1</div>
+    <div class="nav">nav2</div>
+    <script>
+        // 标签查找
+        var div = document.getElementsByTagName('div');   // 类似数组 返回两个
+        console.log(div);
+        var div1 = document.getElementsByTagName('div')[0];   // 读取第一个元素
+        div1.innerHTML = 'hello world'      // 修改内容
+        console.log(div1);
+        
+        // 类查找
+        var text = document.getElementsByClassName('text')[1];
+        console.log(text);
+        
+        // ID查找
+        var root = document.getElementById('root');
+        console.log(root);
+        root.innerHTML = '康神开播了'
+        
+        // 选择器查找
+        var nav = document.querySelector('.nav');   // 返回第一个
+        console.log(nav);
+
+        var navs = document.querySelectorAll('.nav');
+        console.log(navs)
+
+
+
+    </script>
+</body>
+</html>

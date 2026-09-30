@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var message = {
+            name: 'mike',
+            age: 11,
+            arr: ['hello', 'world'],
+            fun: function add(x,y){
+                console.log(x+y)
+            },
+            object:{
+                language:'javascript',
+                hobby:'basketball'}
+        }
+
+        console.log(message.name);
+
+        for(var i = 0; i<message.arr.length; i++){
+            console.log(message.arr[i])
+        }
+
+        message.fun(6,9);
+
+        console.log(message.object.hobby)
+    </script>
+</body>
+</html>

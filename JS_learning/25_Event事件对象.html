@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">按钮</button>
+    <a href="https://blog.csdn.net/" id="it">链接</a>
+    <script>
+        // Event事件对象其实就是参数
+        var btn = document.getElementById('btn');
+        btn.onclick = function(event){
+            console.log('点击');
+            console.log(event.target);
+            event.target.innerHTML = '点击之后';
+            console.log(event.type);
+        }
+
+        var it = document.getElementById('it');
+        it.onclick = function(e){
+            console.log('点击了a');
+            e.preventDefault()     // 点击链接不会跳转
+        }
+
+    </script>
+</body>
+</html>

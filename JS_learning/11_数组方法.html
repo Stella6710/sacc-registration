@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Array.isArray()     判断是否为数组,返回布尔值
+        var arr = ['hello', 'world'];
+        console.log(Array.isArray(arr));
+
+        // .push()      在数组末端加数据
+        arr.push(666);
+        arr.push('你好', 11);
+        console.log(arr);
+        console.log(arr.push('4'));      // 返回增加后数组的元素个数
+
+        // .pop()    删除数组最后一个元素并返回该元素
+        var arr1 = [2,4,3,2];
+        console.log(arr1.pop());
+        console.log(arr1);
+
+        // .shift()   删除第一个元素并返回
+        var arr = [200,300,500];
+                // 可用来清空数组
+        var item;
+        while(item = arr.shift()){
+            console.log(item);
+        }
+        console.log(arr);
+
+        // .unshift()    在头部添加一个元素
+        var arr = [200];
+        arr.unshift(666);
+        console.log(arr);
+
+        // .join()     把数组元素连接成字符串，null和undefined被转成空字符串
+        var arr = ['hello', 'world', null, undefined];
+        console.log(arr.join());  // 以逗号连接
+        console.log(arr.join('')); // 直接相连
+        var result = arr.join('|');
+        console.log(result); 
+        console.log(result.split(' '));
+
+        // .concat()   合并数组
+        var arr = ['hello', 'world'];
+        var arr2 = [33,55];
+        var arr3 = [666];
+        console.log(arr+arr2);// 变成字符串
+        console.log(arr.concat(arr2));
+        console.log(arr.concat(arr2,arr3));
+               // 也可添加元素
+        console.log(arr.concat(22,55,'hello world'));
+        
+        // .reverse()   翻转数组
+        var arr = ['helloworld'];
+        console.log(arr.reverse());
+               // 用来翻转字符串
+        var str = 'helloworld';
+        console.log(str.split('').reverse().join(''));
+
+        // .indexOf()    查找元素返回下标,没有则返回-1
+        var arr = ['a', 'b', 'c', 'a', 'r'];
+        console.log(arr.indexOf('a'))
+        console.log(arr.indexOf('a', 2))  // 从下标2开始查找
+
+    </script>
+</body>
+</html>

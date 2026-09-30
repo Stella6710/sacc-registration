@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 获取时间戳
+        console.log(Date.now());   // 1790675526663
+        
+
+        // 把时间戳变成格式
+        console.log(new Date(1790675526663));   // Tue Sep 29 2026 17:52:06 GMT+0800 (中国标准时间)
+        console.log(new Date());   //现在的时间
+        
+        // 
+        console.log(new Date(1790675526663).getDate());    //几号
+        console.log(new Date(1790675526663).getDay());     //星期几  星期日为0
+        console.log(new Date(1790675526663).getFullYear()); //年份
+        console.log(new Date(1790675526663).getMonth()+1);    //月份 从0~11
+
+        var year = new Date(1790675526663).getFullYear();
+        var month = new Date(1790675526663).getMonth()+1;
+        var date = new Date(1790675526663).getDate();
+        console.log(year+'-'+month+'-'+date);  //2026-9-29
+
+        // 到年底的剩余天数
+        function leftDays(){
+            var today = new Date();
+            var endyear = new Date(today.getFullYear(), 11, 31, 23,59,59,999);
+            var a = 24*60*60*1000;
+            var result = (endyear.getTime()-today.getTime())/a;
+            console.log(Math.floor(result));
+        }
+        leftDays()
+    </script>
+</body>
+</html>

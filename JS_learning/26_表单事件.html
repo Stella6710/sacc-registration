@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="user">
+    <input type="text" id="password">
+
+    <form id="myform" onsubmit="handle">
+        <input type="text" name="username">
+        <button id="resetBtn">重置</button>
+        <button>提交表单</button>
+    </form>
+
+    <script>
+        var user = document.getElementById('user');
+        user.oninput = function(e){
+            console.log(e.target.value);// 读取数据
+        }
+
+        user.onselect = function(){
+            console.log('选中了');
+        }
+
+        var password = document.getElementById('password');
+        password.onchange = function(e){
+            console.log(e.target.value);  // 失去焦点和回车时触发
+        }
+
+        var myform = document.getElementById('myform');
+        var resetBtn = document.getElementById('resetBtn');
+        resetBtn.onclick = function(){
+            myform.reset();   // 触发在表单上，清空表单
+        }
+
+        function handle(){
+
+        }
+        
+    </script>
+</body>
+</html>
