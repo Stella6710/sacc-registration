@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 200px;
+            width: 200px;
+            background-color: chocolate;
+            animation:anim 4s linear 0s infinite ;
+            margin: auto;
+            border-radius: 25%;
+            box-shadow: 20px 20px 10px gainsboro ;
+        }
+        @keyframes anim{
+            0% {
+                background-color: aqua;
+            }
+            25% {
+                background-color: blueviolet;
+            }
+            50% {
+                background-color: rgb(255, 0, 0);
+            }
+            75% {
+                background-color: blueviolet;
+            }
+            100% {
+                background-color: aqua;
+            }
+        }
+        div:hover{
+            background-color: aliceblue;
+        }
+    </style>
+
+</head>
+<body>
+    <div></div>
+</body>
+</html>
